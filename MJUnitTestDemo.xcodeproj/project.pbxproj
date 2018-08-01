@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002DF77690B11A9D49F8B248 /* libPods-MJUnitTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88BBF6F0FBDD51F7D5343B /* libPods-MJUnitTestDemo.a */; };
 		60290A262111A66800524CA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60290A252111A66800524CA3 /* AppDelegate.m */; };
 		60290A292111A66800524CA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60290A282111A66800524CA3 /* ViewController.m */; };
 		60290A2C2111A66800524CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60290A2A2111A66800524CA3 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A88BBF6F0FBDD51F7D5343B /* libPods-MJUnitTestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJUnitTestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4023D8EF9771EEFCD06DE3C8 /* Pods-MJUnitTestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJUnitTestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJUnitTestDemo/Pods-MJUnitTestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		60290A212111A66800524CA3 /* MJUnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJUnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60290A242111A66800524CA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60290A252111A66800524CA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		60290A392111A66A00524CA3 /* MJUnitTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJUnitTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60290A3D2111A66A00524CA3 /* MJUnitTestDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJUnitTestDemoTests.m; sourceTree = "<group>"; };
 		60290A3F2111A66A00524CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0634C4BE249DF4E139B800E /* Pods-MJUnitTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJUnitTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJUnitTestDemo/Pods-MJUnitTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002DF77690B11A9D49F8B248 /* libPods-MJUnitTestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5681925B25D8099A883972C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A88BBF6F0FBDD51F7D5343B /* libPods-MJUnitTestDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60290A182111A66800524CA3 = {
 			isa = PBXGroup;
 			children = (
 				60290A232111A66800524CA3 /* MJUnitTestDemo */,
 				60290A3C2111A66A00524CA3 /* MJUnitTestDemoTests */,
 				60290A222111A66800524CA3 /* Products */,
+				DDBF7B3A30227CD2E1525F0A /* Pods */,
+				5681925B25D8099A883972C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +118,15 @@
 			path = MJUnitTestDemoTests;
 			sourceTree = "<group>";
 		};
+		DDBF7B3A30227CD2E1525F0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0634C4BE249DF4E139B800E /* Pods-MJUnitTestDemo.debug.xcconfig */,
+				4023D8EF9771EEFCD06DE3C8 /* Pods-MJUnitTestDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60290A422111A66A00524CA3 /* Build configuration list for PBXNativeTarget "MJUnitTestDemo" */;
 			buildPhases = (
+				FA7B89E49D15FCEB603D12FD /* [CP] Check Pods Manifest.lock */,
 				60290A1D2111A66800524CA3 /* Sources */,
 				60290A1E2111A66800524CA3 /* Frameworks */,
 				60290A1F2111A66800524CA3 /* Resources */,
@@ -197,6 +222,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA7B89E49D15FCEB603D12FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJUnitTestDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60290A1D2111A66800524CA3 /* Sources */ = {
@@ -359,6 +405,7 @@
 		};
 		60290A432111A66A00524CA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0634C4BE249DF4E139B800E /* Pods-MJUnitTestDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,14 +414,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MJUnitTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		60290A442111A66A00524CA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4023D8EF9771EEFCD06DE3C8 /* Pods-MJUnitTestDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MJUnitTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
@@ -404,6 +455,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJUnitTestDemo.app/MJUnitTestDemo";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -422,6 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJUnitTestDemo.app/MJUnitTestDemo";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
