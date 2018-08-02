@@ -19,6 +19,9 @@
     
 }
 
+- (int)getNum{
+    return 100;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,12 +10,12 @@
 #import "AFNetworking.h"
 
 #define WAIT do {\
-[self expectationForNotification:@"RSBaseTest" object:nil handler:nil];\
+[self expectationForNotification:@"MJUnitTest" object:nil handler:nil];\
 [self waitForExpectationsWithTimeout:30 handler:nil];\
 } while (0);
 // waitForExpectationsWithTimeout是等待时间，超过了就不再等待往下执行。
 #define NOTIFY \
-[[NSNotificationCenter defaultCenter]postNotificationName:@"RSBaseTest" object:nil];
+[[NSNotificationCenter defaultCenter]postNotificationName:@"MJUnitTest" object:nil];
 
 @interface MJUnitTestDemoTests : XCTestCase
 
@@ -34,12 +34,9 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
-    NSLog(@"自定义测试 testExample");
+    // NSLog(@"自定义测试 testExample");
     NSInteger a = 5;
-    NSInteger b = 6;
+    NSInteger b = 5;
     XCTAssertEqual(a, b, "a不等于b");
 }
 
@@ -64,10 +61,66 @@
     WAIT   //暂停
 }
 
+- (void)testRequest2{
+    
+    XCTestExpectation *exp = [self expectationWithDescription:@"接口请求失败。。。"];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    NSString *urlStr = @"http://www.weather.com.cn/data/cityinfo/101190401.html";
+    [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"responseObject2:%@",responseObject);
+        XCTAssertNotNil(responseObject, @"返回出错");
+        //如果断言没问题，就调用fulfill宣布测试满足
+        [exp fulfill];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"error:%@",error);
+        XCTAssertNil(error, @"请求出错");
+        
+        [exp fulfill];
+        
+    }];
+    
+    //设置延迟多少秒后，如果没有满足测试条件就报错
+    [self waitForExpectationsWithTimeout:15 handler:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
+// 生成在[base, end]之间的随机数
+- (int)randomNumberFrom: (int)base End: (int)top{
+    if (base >= top) {
+        return base;
+    }
+    return (arc4random() % (top - base + 1)) + base;
+}
+
+- (void)testRandom{
+    int base = 3;
+    int top = 80;
+    
+    for (int i=0; i<100; i++) {
+        int temp = [self randomNumberFrom:base End:top];
+        if (temp < base || temp > top) {
+            XCTFail(@"invalid num = %d",temp);
+        }
+    }
+}
+
 - (void)testPerformanceExample {
-    // This is an example of a performance test case.
+    
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        
+        NSMutableArray * mutArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 9999; i++) {
+            NSObject * object = [[NSObject alloc] init];
+            [mutArray addObject:object];
+        }
     }];
 }
 

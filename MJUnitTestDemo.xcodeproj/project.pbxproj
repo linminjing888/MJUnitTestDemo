@@ -15,6 +15,7 @@
 		60290A312111A66A00524CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60290A2F2111A66A00524CA3 /* LaunchScreen.storyboard */; };
 		60290A342111A66A00524CA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60290A332111A66A00524CA3 /* main.m */; };
 		60290A3E2111A66A00524CA3 /* MJUnitTestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60290A3D2111A66A00524CA3 /* MJUnitTestDemoTests.m */; };
+		609439C92112D2A10040C9C8 /* MJViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609439C82112D2A10040C9C8 /* MJViewControllerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		60290A392111A66A00524CA3 /* MJUnitTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJUnitTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60290A3D2111A66A00524CA3 /* MJUnitTestDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJUnitTestDemoTests.m; sourceTree = "<group>"; };
 		60290A3F2111A66A00524CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609439C82112D2A10040C9C8 /* MJViewControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJViewControllerTest.m; sourceTree = "<group>"; };
 		B0634C4BE249DF4E139B800E /* Pods-MJUnitTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJUnitTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJUnitTestDemo/Pods-MJUnitTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				60290A3D2111A66A00524CA3 /* MJUnitTestDemoTests.m */,
+				609439C82112D2A10040C9C8 /* MJViewControllerTest.m */,
 				60290A3F2111A66A00524CA3 /* Info.plist */,
 			);
 			path = MJUnitTestDemoTests;
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60290A3E2111A66A00524CA3 /* MJUnitTestDemoTests.m in Sources */,
+				609439C92112D2A10040C9C8 /* MJViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
